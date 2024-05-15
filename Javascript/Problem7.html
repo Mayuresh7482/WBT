@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Function Example</title>
+</head>
+
+<body>
+    <h1>Min Function Example</h1>
+    <button onclick="calculateMin()">Calculate Min</button>
+    <p id="result"></p>
+
+    <label for="num">Enter the number of input fields:</label>
+    <input type="number" id="num" placeholder="Enter number">
+
+    <script>
+        function min() {
+            let minVal = arguments[0];
+            for (let i = 1; i < arguments.length; i++) {
+                if (arguments[i] < minVal) {
+                    minVal = arguments[i];
+                }
+            }
+            return minVal;
+        }
+
+        function calculateMin() {
+            const num = parseInt(document.getElementById("num").value);
+            let minNum = Number.MAX_VALUE;
+
+            for (let i = 1; i <= num; i++) {
+                const inputField = document.createElement("input");
+                inputField.type = "number";
+                inputField.id = `n${i}`;
+                inputField.placeholder = `Enter number ${i}`;
+                document.body.appendChild(inputField);
+            }
+    
+            for (let i = 1; i <= num; i++) {
+                const mini = parseInt(document.getElementById(`n${i}`).value);
+                minNum = min(minNum, mini);
+            }
+
+            document.getElementById("result").innerHTML = `The minimum number is: ${minNum}`;
+            
+        }
+    </script>
+</body>
+
+</html>

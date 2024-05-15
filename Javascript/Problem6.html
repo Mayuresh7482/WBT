@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function sumOfDigit() {
+            var n = parseInt(document.getElementById("five").value);
+            let sum = 0;
+            while (n > 0) {
+                sum += n % 10;
+                n = Math.floor(n / 10);
+            }
+            document.getElementById("answer").innerHTML = "The Sum of number digits: "+ sum;
+        }
+    </script>
+</head>
+
+<body>
+    <label for="five">Enter the five digit number:</label>
+    <input type="number" name="five" id="five">
+    <button onclick="sumOfDigit()">Sum</button>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+
+</html>

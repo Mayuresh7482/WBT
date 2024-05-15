@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(44, 82, 139);
+}
+
+fieldset{
+    width: 80vw;
+    margin: auto;
+}
+
+td label{
+    padding-right: 10px;
+}
+td input{
+    padding-left: 10px;
+}
+
+legend{
+    color: white;
+}
+tbody{
+    height: 40vh;
+    background-color: rgb(44, 82, 139);
+}

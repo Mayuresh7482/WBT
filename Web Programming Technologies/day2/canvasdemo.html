@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border:2px solid red; border-radius:6px;width:200px;height:200px">
+    <canvas id="mycanvas" name="mycanvs" width="200px" height="200px"></canvas>
+    </div>
+    <script>
+        var canvas=document.getElementById("mycanvas");
+        var ctx=canvas.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+        // display text
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World!!", 10, 50);
+        ctx.fillText("Welcome!!", 10, 100);
+    </script>
+</body>
+</html>

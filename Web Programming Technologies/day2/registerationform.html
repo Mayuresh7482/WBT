@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table>
+    <caption>This is registration form</caption>
+    <form method="post">
+    <tr>
+        <td><label for="nm">Name</label></td>
+        <td><input type="text" name="nm" id="nm1" required minlegth="3"/></td>
+    </tr>
+    <tr>
+        <td><label for="mob">Mobile</label></td>
+        <td><input type="text" name="mob" id="mob" pattern="^[0-9]{10}$"/></td>
+    </tr>
+    <tr>
+        <td><label for="addr">Address</label></td>
+        <td><textarea name="addr" rows="5" cols="20" id="addr"></textarea></td>
+    </tr>
+    <tr>
+        <td><label for="date">Date of joining</label></td>
+        <td><input type="date" name="date" id="date" min="2024-05-06" max="2024-06-02"></input></td>
+    </tr>
+    <tr>
+        <td><label for="gender">Gender</label></td>
+        <td>
+            <input type="radio" name="gender" id="male" value="male" checked>
+            <label>Male</label>
+            <input type="radio" name="gender" id="Female" value="Female">
+            <label>Female</label>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="addr">Degree</label></td>
+        <td>
+            <input type="radio" name="degree" id="BTECH" value="BTECH" checked>
+            <label for="BTECH">BTech</label>
+            <input type="radio" name="degree" id="BE" value="BE">
+            <label for="BE">BE</label>
+            <input type="radio" name="degree" id="phd" value="phd">
+            <label for="phd">Phd</label>
+        </td>
+    </tr>
+    <tr>
+        <td><label>Skills</label></td>
+        <td>
+            <fieldset>
+                <legend>Select skills</legend>
+            <input type="checkbox" name="skill" id="java" value="java"/>
+            <label for="java">JAVA</label>
+            <input type="checkbox" name="skill" id="C++" value="C++" checked/>
+            <label for="C++">C++</label>
+            <input type="checkbox" name="skill" id="python" value="python"/>
+            <label for="python">python</label><br>
+            <input type="checkbox" name="skill" id="Perl" value="Perl"/>
+            <label for="Perl">Perl</label>
+            <input type="checkbox" name="skill" id="Devops" value="Devops"/>
+            <label for="Devops">Devops</label>
+        </fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td>
+            <select id="city" name="city" size="4" multiselect>
+                <option value="test">----select one---</option>
+                <option value="pune">Pune</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Banglore" >Banglore</option>
+                <option value="Nashik">Nashik</option>
+                <option value="Nagpur">Nagpur</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button type="submit" name="btn" id="btn" value="register">Register</button>
+            <button type="reset" name="btn1" id="btn1" value="reset">Reset</button>
+        </td>
+    </tr>
+
+    </form>
+</table>
+</body>
+</html>

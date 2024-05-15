@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <link rel="stylesheet" href="p2.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Registration Details</legend>
+        <table>
+           
+            <tbody>
+              <tr>
+                <td><label for="myLabel">University:</label></td>
+                <td><input type="text" id="myLabel" placeholder="Enter University Name"></td>
+              </tr>
+              <tr>
+                <td><label for="myInstitute">Institute:</label></td>
+                <td><input type="text" id="myInstitute" placeholder="Enter Institute Name"></td>
+              </tr>
+              <tr>
+                <td><label for="myBranch">Branch:</label></td>
+                <td>
+                  <select id="myBranch" name="myBranch">
+                    <option value="">Select Branch</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Computer">Computer</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <label for="">Degree : </label>
+                </td>
+                <td colspan="2">
+                    
+                    <select name="myDegree" id="myDegree">
+                        <option value="">Select Degree</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="M.Sc">M.Sc</option>
+                        <option value="Ph.D">Ph.D</option>
+    
+                    </select>
+                    <input type="radio" id="myPursing" name="educationStatus" value="Pursing"> Pursing
+                    <input type="radio" id="myCompleted" name="educationStatus" value="Completed"> Completed
+               
+                </td>
+              </tr>
+              <tr>
+                <td><label for="myavg">Average CPI:</label></td>
+                <td>
+                  <input type="number" id="myavg" name="avg" min="0" max="100">
+                  <span>Upto</span>
+                  <input type="number" id="mySem" name="sem" min="1" max="8">
+                  <span> Th Semester</span>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="Experience">Experience:</label></td>
+                <td>
+                  <input type="number" id="Experience" name="Experience" min="0" max="10">
+                  <span>Years</span>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="blog">Your Website Or Blog:</label></td>
+                <td>
+                  <input type="url" id="blog" name="blog" placeholder="http://">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </fieldset>
+
+</body>
+
+</html>

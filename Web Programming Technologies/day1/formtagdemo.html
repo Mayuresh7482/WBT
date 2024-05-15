@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="validatadata" method="post">
+        <label for="unm">Username :</label>
+         <input type="text" name="uname" id="unm" pattern="[a-zA-Z0-9]+" required autofocus minlength="3" maxlength="8"></input><br>
+        <label for="passwd">Password :</label> 
+        <input type="password" name="pass" id="passwd" /><br>
+        <!--<input type="button" name="btn" id="btn" value="Login"></input>-->
+        <button type="submit" name="btn" id="btn" value="Login">user Login</button>
+        <button type="reset" name="btn" id="btn1" value="cancel">Cancel</button>
+    </form>
+</body>
+</html>

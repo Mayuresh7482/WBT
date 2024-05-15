@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.fixed{
+            border:2px solid red;
+            border-radius: 10px;
+            position:fixed;
+            left:200px;
+            bottom:0
+        }
+        div.sticky{
+            border:2px solid red;
+            border-radius: 10px;
+            position:relative;
+            top:0;  
+        }
+        div.parent{
+            width:600px;
+            height:200px;
+            border:2px solid brown;
+            border-radius: 10 px;
+            position:relative;
+        }
+div.child{
+    width:400px;
+    height:150px;
+    border:2px solid green;
+    border-radius: 10 px;
+    /*position:relative;*/
+}
+
+div.grandchild{
+    width:200px;
+    height:100px;
+    border:2px solid red;
+    border-radius: 10 px;
+    position:absolute;
+    right:0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        This is div11111 parent
+        <div class="child">
+           This is child div 22222 
+           <div class="grandchild">
+            This is grand child div 3333 
+           </div>
+        </div>
+    </div>
+    <div class="fixed">
+        This is fixed div, at bottom 0
+    </div>
+    <div class="sticky">
+        This is sticky div 8379874587
+    </div>
+        <ul type="square">
+            <li>mobile
+               <ol>
+                  <li>iphone 14</li>
+                  <li>samsung notes</li>
+                  <li>google pixel</li>
+               </ol> 
+            </li>
+            <li>books</li>
+            <li>fruits</li>
+        </ul>
+    
+        <ol type="A" start="3">
+            <li>iphone 
+                <ol>
+                    <li>iphone 14</li>
+                    <li>iphone 14 max</li>
+                    <li>iphone 15</li>
+                 </ol> 
+    
+            </li>
+            <li>samsung notes</li>
+            <li>google pixel</li>
+            <li>oppo</li>
+         </ol>
+         <dl>
+            <dt>Term1</dt>
+            <dd>This is term1 definition</dd>
+            <dt>Term2</dt>
+            <dd>This is term2 definition</dd>
+            <dt>Term3</dt>
+            <dd>This is term1 definition</dd>
+    
+         </dl> 
+   
+</body>
+</html>

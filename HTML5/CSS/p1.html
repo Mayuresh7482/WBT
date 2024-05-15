@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="p1.css">
+    <script src="./p1.js"></script>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Name and Address</legend>
+            <table>
+                <thead>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="mySsn">SSN:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="mySsn" id="mySsn">
+                            <input type="button" value="Fill in name and address" class="fill">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="myfullName">Full Name:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="myfullName" id="myfullName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="myStreetnumber">Street and number:</label>
+                        </td>
+                        <td>
+                            <input type="number" name="myStreetnumber" id="myStreetnumber">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="myPostalCode">Postal Code:</label>
+                        </td>
+                        <td>
+                            <input type="number" name="myPostalCode" id="myPostalCode">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="myCity">City:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="myCity" id="myCity">
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Username and Password</legend>
+            <table>
+                <th></th>
+                <th></th>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="username">Username:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="myPassword">Password:</label>
+                        </td>
+                        <td>
+                            <input type="password" id="myPassword">
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <input type="checkbox" onclick="myFunction()" id="pass"> Show Password
+        </fieldset>
+        <input type="submit" class="btn" value="Register">
+    </form>
+</body>
+
+</html>
