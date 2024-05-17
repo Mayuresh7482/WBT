@@ -1,0 +1,28 @@
+<!-- Accept an integer value and a message from user and print the message that many number of times -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Times() {
+            var num = parseInt(document.getElementById('num').value)
+            var msg = document.getElementById('txt').value + '  '
+            document.getElementById('result').innerHTML = msg.repeat(num)
+        }
+    </script>
+</head>
+
+<body>
+    <label for="num">Enter the number </label>
+    <input type="number" name="num" id="num">
+    <label for="msg">Enter the message </label>
+    <input type="text" id="txt" name="txt">
+    <button type="submit" value="times" id="times" onclick="Times()">Times the Message</button>
+    <p id="result"></p>
+</body>
+
+</html>

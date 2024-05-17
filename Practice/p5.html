@@ -1,0 +1,26 @@
+<!-- Write a program to print the multiplication table of a given number upto 10 mutliples  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Table() {
+            const n = parseInt(document.getElementById('n').value)
+            for (let i = 1; i <= 10; i++) {
+                document.getElementById('result').innerHTML += `${n} * ${i} = ${n * i}<br>`
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <label for="n">Enter the number for Table </label>
+    <input type="number" name="n" id="n" required>
+    <button type="button" value="btn" id="btn" onclick="Table()">Tables</button>
+    <p id="result"></p>
+</body>
+
+</html>

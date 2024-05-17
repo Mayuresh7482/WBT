@@ -1,0 +1,49 @@
+<!-- write a function that accept two numbers and a operator like (+,-,*,/) from user and performs the appropriate operation indicated by the operator   -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Calculate() {
+            const n = parseInt(document.getElementById('num1').value)
+            const m = parseInt(document.getElementById('num2').value)
+            const op = document.getElementById('operator').value
+
+            switch (op) {
+                case '+':
+                    document.getElementById('result').innerHTML = " Addition of Two number is : " + `${n + m}`
+                    break;
+                case '-':
+                    document.getElementById('result').innerHTML = " Subtraction of Two number is : " + `${n - m}`
+                    break;
+                case '*':
+                    document.getElementById('result').innerHTML = " Multiplication of Two number is : " + `${n * m}`
+                    break;
+                case '/':
+                    document.getElementById('result').innerHTML = " Division of Two number is : " + `${n / m}`
+                    break;
+
+                default:
+                    document.getElementById('result').innerHTML = "please enter valid number "
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <label for="num1">Enter the First number</label>
+    <input type="number" name="num" id="num1" value="num" required>
+    <label for="num2">Enter the Second number</label>
+    <input type="number" name="num" id="num2" value="num" required>
+    <label for="operator">Operator(+,-,*,/)</label>
+    <input type="text" name="num" id="operator" required>
+    <button type="button" id="btn" value="btn" onclick="Calculate()">Calculate</button>
+    <p id="result"></p>
+</body>
+
+</html>

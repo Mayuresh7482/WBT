@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findLargest() {
+            var n1 = parseInt(document.getElementById('n1').value)
+            var n2 = parseInt(document.getElementById('n2').value)
+            var n3 = parseInt(document.getElementById('n3').value)
+            var largest = n1;
+            if (n2 > largest) {
+                largest = n2;
+            }
+            if (n3 > largest) {
+                largest = n3;
+            }
+            document.getElementById('result').innerText = "The largest of Three numbers : " + largest;
+            document.getElementById('number').innerText = ` n1 is ${n1} n2 is ${n2} n3 is ${n3} `
+
+            // Clear input fields
+            document.getElementById('n1').value = '';
+            document.getElementById('n2').value = '';
+            document.getElementById('n3').value = '';
+        }
+    </script>
+</head>
+
+<body>
+    <label for="n1">Enter the First Number :</label>
+    <input type="number" name="n1" id="n1" required>
+    <label for="n2">Enter the Second Number :</label>
+    <input type="number" name="n2" id="n2" required>
+    <label for="n3">Enter the Third Number :</label>
+    <input type="number" name="n3" id="n3" required>
+    <button type="submit" id="btn" onclick="findLargest()" value="Largest of All">Largest</button>
+    <p id="number"></p>
+    <p id="result"></p>
+</body>
+
+</html>

@@ -4,51 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Minimum Value Finder</title>
     <script>
-        function min() {
-            // jinata bi hai leke chalo
-            let minVal = arguments[0]; // arguments cannot be zero 
-            for (let i = 1; i < arguments.length; i++) { // till array length
-                if (arguments[i] < minVal) { // arguments 1 se jada rahege toh chalega 
-                    minVal = arguments[i]; // stores the values 
-                }
-            }
-            return minVal; // returns the minimum of the set
+        function findMinimum() {
+            // Assuming a single input field for simplicity
+            const numStr = document.getElementById("numInput").value;
+            const nums = numStr.split(',').map(Number); // Split by comma and convert to numbers
+            const minNum = min(...nums);
+            document.getElementById('result').innerHTML = `The minimum value of all is : ${minNum}`;
         }
 
-        function calculateMin(){
-            // values leke ata hu
-            let num = parseInt(document.getElementById("num").value)
-            let minNum = Number.MAX_VALUE; // jinata bija hai uthana toh hai bhai 
-
-            // input se mila sab runtime pe
-            for(let i=1;i<=num;i++){
-                let inputField=document.createElement("input")
-                inputField.type="number"
-                inputField.id=`n${i}`
-                inputField.placeholder=`Enter number ${i}`
-                document.body.appendChild(inputField);
+        function min(...numbers) {
+            let minValue = numbers[0];
+            for (let index = 1; index < numbers.length; index++) {
+                if (numbers[index] < minValue) {
+                    minValue = numbers[index];
+                }
             }
-
-            for(let i=1;i<=num;i++){
-                let mini=parseInt(document.getElementById(`n${i}`).value) // n${i} ye bhi runtime upar vale for loop se mela hai [inputField.id=`n${i}`] id se value lake degha 
-                minNum=min(minNum,mini); // subha kuch lehe min function ke pass ja
-            }
-
-            document.getElementById("result").innerHTML=` The minimum number is : ${minNum}`;
+            return minValue;
         }
     </script>
 </head>
 
 <body>
-    <h1>Minimun Function Example</h1>
-    <button id="divInner" onclick="calculateMin()">Calculate Minimum Number</button>
-    <div>
-        <label for="num">Enter the number of input Fields :</label>
-        <input type="number" name="num" id="num">
-    </div>
-    <p id="result"></p>
+    <label for="numInput">Enter numbers (comma-separated):</label>
+    <input type="text" id="numInput">
+    <button type="button" value="btn" id="btn" onclick="findMinimum()">Find Minimum</button>
+    <br>
+    <div id="result"></div>
 </body>
 
 </html>

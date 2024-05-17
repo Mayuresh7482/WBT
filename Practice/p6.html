@@ -1,0 +1,33 @@
+<!-- Write a program to find sum of digits of given five-digit number. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Digit number</title>
+    <script>
+        function calculateSumOfDigits() {
+            const n = document.getElementById('n').value
+            if (n.length !== 5) {
+                document.getElementById('result').innerHTML = 'please enter a five digit number '
+                return
+            }
+
+            let sum=0;
+            for(let i=0;i<n.length;i++){
+                sum += parseInt(n.charAt(i));
+            }
+            document.getElementById('result').innerHTML=`Sum of numbers is :  ${sum}`
+        }
+    </script>
+</head>
+
+<body>
+    <label for="n">Enter the number</label>
+    <input type="number" name="n" id="n" required>
+    <button type="button" value="btn" id="btn" onclick="calculateSumOfDigits()">Sum</button>
+    <p id="result"></p>
+</body>
+
+</html>

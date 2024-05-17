@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Calculation</title>
+    <script>
+        function powLoop(x, y) {
+            let result = 1;
+            for(let i = 0; i < y; i++) {
+                result *= x; // Multiply x by itself y times
+            }
+            document.getElementById('result').innerHTML = `Using pow, we get ${result}`;
+        }
+    </script>
+</head>
+<body>
+    <label for="in1">Enter base number:</label>
+    <input type="number" name="in" id="in1" required>
+    <label for="in2">Enter exponent:</label>
+    <input type="number" name="in" id="in2" required>
+    <button type="button" id="btn" value="btn" onclick="powLoop(document.getElementById('in1').value, document.getElementById('in2').value)">Pow Factor</button>
+    <p id="result"></p>
+</body>
+</html>

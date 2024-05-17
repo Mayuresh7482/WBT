@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <span>---------------------------------------------------------------------------------------------------------------------------</span>
+    <h2>**************** Compound Interest Calculator ***************</h2>
+    <span>---------------------------------------------------------------------------------------------------------------------------</span>
+    <form id="compoundInterestForm">
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for="principal">Principal Amount : </label><br></td>
+                <td><input type="number" id="principal" name="principal"> Rs<br></td>
+            </tr>
+            <tr>
+                <td><label for="rate"> Rate of Interest : </label><br></td>
+                <td><input type="number" id="rate" name="rate"> % <br></td>
+            </tr>
+            <tr>
+                <td><label for="time">Period  : </label><br></td>
+                <td><input type="number" id="time" name="time"> Year <br></td>
+            </tr>
+        </table>
+        <button type="button" id="btn" value="btn" onclick="calculateCompoundInterest()">Calculate Compound
+            Interest</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function calculateCompoundInterest() {
+            const principal = parseFloat(document.getElementById('principal').value);
+            const rate = parseFloat(document.getElementById('rate').value) / 100;
+            const time = parseInt(document.getElementById('time').value);
+
+            // Manually calculate (1 + rate)^time without using Math.pow
+            let temp = 1;
+            for (let i = 0; i < time; i++) {
+                temp *= 1 + rate;
+            }
+
+            // Calculate compound interest
+            const amount = principal * temp;
+            const compoundInterest = amount - principal;
+
+            // Round the result manually
+            const roundedCompoundInterest = Math.round(compoundInterest * 100) / 100;
+
+            // Display the result
+            document.getElementById('result').textContent = `Compound Interest: $${roundedCompoundInterest}`;
+        }
+    </script>
+</body>
+
+</html>
