@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(33, 69, 136);
+    text-align: center;
+    color: white;
+    height: max-content;
+}
+fieldset{
+    border-color: white;
+    margin-bottom: 20px;
+    width: 20vw;
+    margin-left: 30vw;
+}
+.btn{
+    border-radius: 50%;
+    background-color: rgb(110, 182, 1);
+    color: white;
+    border: none;
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+table{
+    margin: 1em 10vw;
+}
+td{
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+tr>td:first-child{
+    text-align: right;
+}
+tr>td:nth-child(2){
+    text-align: left;
+}
+legend{
+    text-align: left;
+}
