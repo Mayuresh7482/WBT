@@ -5,4 +5,4 @@ function powNumber(num ,power){
     }
     return res;
 }
-console.log(powNumber(43,43));
+console.log(powNumber(4,3)); // 4*4*4=64

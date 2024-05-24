@@ -8,4 +8,6 @@ function calculate() {
   out.innerHTML = `Area: ${Math.pow(radius.value, 2) * Math.PI}<br>
   Circumference: ${2 * Math.PI * radius.value}`;
 }
-document.querySelector('form').addEventListener("submit", (e)=>{e.preventDefault()})
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+});

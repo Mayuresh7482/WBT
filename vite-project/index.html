@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Management System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <div class="container mt-5">
+      <h2>Add New Book</h2>
+      <form id="bookForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" required minlength="3">
+        </div>
+        <div class="form-group">
+          <label for="author">Author:</label>
+          <input type="text" class="form-control" id="author" required>
+        </div>
+        <div class="form-group">
+          <label for="publishDate">Publish Date:</label>
+          <input type="date" class="form-control" id="publishDate" required>
+        </div>
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input type="number" class="form-control" id="price" min="201" required>
+        </div>
+        <div class="form-group">
+          <label for="languages">Languages:</label>
+          <input type="checkbox" id="hindi" name="languages" value="Hindi">
+          <label for="hindi"> Hindi</label><br>
+          <input type="checkbox" id="english" name="languages" value="English">
+          <label for="english"> English</label><br>
+          <input type="checkbox" id="marathi" name="languages" value="Marathi">
+          <label for="marathi"> Marathi</label><br>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    
+    <script>
+    $(document).ready(function() {
+      $('#bookForm').on('submit', function(e) {
+        e.preventDefault();
+        var isValid = true;
+    
+        // Validate at least two languages are selected
+        var selectedLanguages = $('input[name="languages"]:checked');
+        if (selectedLanguages.length < 2) {
+          alert("Please select at least two languages.");
+          isValid = false;
+        }
+    
+        if (isValid) {
+          // Logic to add book to the table
+          var newRow = $('<tr>');
+          newRow.append($('<td>').text($('#name').val()));
+          newRow.append($('<td>').text($('#author').val()));
+          newRow.append($('<td>').text($('#publishDate').val()));
+          newRow.append($('<td>').text($('#price').val()));
+          newRow.append($('<td>').text(selectedLanguages.map(function() {
+            return $(this).val();
+          }).join(', ')));
+          $('#booksTable').append(newRow);
+          $('#bookForm')[0].reset(); // Reset form
+        }
+      });
+    });
+    </script>
+    
+  </body>
+</html>

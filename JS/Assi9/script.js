@@ -4,6 +4,8 @@ function calcCI() {
   const years = document.getElementById("years").value;
   const out = document.getElementById("out");
 
+// Math.pow() is used to calculate a number raise to the power of some other number
+
   let res = principle * Math.pow(1 + rate / 100, years) - principle;
 
   out.innerHTML = `Compound Interest = ${res}  <br>  Principle = ${principle}`;
